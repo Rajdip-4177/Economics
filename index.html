@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IPL Teams Socio-Economic Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>🏏 IPL Teams & Socio-Economic Analysis</h1>
+    <p class="subheading">A comparative view of different IPL teams and key socio-economic indicators of their respective regions.</p>
+
+    <button id="toggleViewBtn">Switch to Card View</button>
+
+    <!-- Desktop Table View -->
+    <div id="desktopView">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Life Expectancy</th>
+              <th>Infant Mortality Rate</th>
+              <th>Literacy Rate (%)</th>
+              <th>Attendance Ratio (%)</th>
+              <th>Per Capita Income (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/CSK/logos/Logooutline/CSKoutline.png" alt="CSK" class="logo" />
+                  <span>Chennai Super Kings</span>
+                </div>
+              </td>
+              <td data-label="City">Chennai</td>
+              <td data-label="State">Tamil Nadu</td>
+              <td data-label="Life Expectancy">71.0</td>
+              <td data-label="Infant Mortality Rate">15</td>
+              <td data-label="Literacy Rate (%)">80.1</td>
+              <td data-label="Attendance Ratio (%)">89.5</td>
+              <td data-label="Per Capita Income (₹)">193,964</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/DC/Logos/LogoOutline/DCoutline.png" alt="DC" class="logo" />
+                  <span>Delhi Capitals</span>
+                </div>
+              </td>
+              <td data-label="City">New Delhi</td>
+              <td data-label="State">Delhi</td>
+              <td data-label="Life Expectancy">73.8</td>
+              <td data-label="Infant Mortality Rate">13</td>
+              <td data-label="Literacy Rate (%)">86.2</td>
+              <td data-label="Attendance Ratio (%)">89.8</td>
+              <td data-label="Per Capita Income (₹)">358,430</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/GT/Logos/Logooutline/GToutline.png" alt="GT" class="logo" />
+                  <span>Gujarat Titans</span>
+                </div>
+              </td>
+              <td data-label="City">Ahmedabad</td>
+              <td data-label="State">Gujarat</td>
+              <td data-label="Life Expectancy">69.1</td>
+              <td data-label="Infant Mortality Rate">28</td>
+              <td data-label="Literacy Rate (%)">78.0</td>
+              <td data-label="Attendance Ratio (%)">93.7</td>
+              <td data-label="Per Capita Income (₹)">195,845</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/KKR/Logos/Logooutline/KKRoutline.png" alt="KKR" class="logo" />
+                  <span>Kolkata Knight Riders</span>
+                </div>
+              </td>
+              <td data-label="City">Kolkata</td>
+              <td data-label="State">West Bengal</td>
+              <td data-label="Life Expectancy">70.5</td>
+              <td data-label="Infant Mortality Rate">22</td>
+              <td data-label="Literacy Rate (%)">76.3</td>
+              <td data-label="Attendance Ratio (%)">88.4</td>
+              <td data-label="Per Capita Income (₹)">101,138</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/LSG/Logos/Logooutline/LSGoutline.png" alt="LSG" class="logo" />
+                  <span>Lucknow Super Giants</span>
+                </div>
+              </td>
+              <td data-label="City">Lucknow</td>
+              <td data-label="State">Uttar Pradesh</td>
+              <td data-label="Life Expectancy">64.5</td>
+              <td data-label="Infant Mortality Rate">43</td>
+              <td data-label="Literacy Rate (%)">67.7</td>
+              <td data-label="Attendance Ratio (%)">79.2</td>
+              <td data-label="Per Capita Income (₹)">66,512</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/MI/Logos/Logooutline/MIoutline.png" alt="MI" class="logo" />
+                  <span>Mumbai Indians</span>
+                </div>
+              </td>
+              <td data-label="City">Mumbai</td>
+              <td data-label="State">Maharashtra</td>
+              <td data-label="Life Expectancy">72.0</td>
+              <td data-label="Infant Mortality Rate">19</td>
+              <td data-label="Literacy Rate (%)">82.3</td>
+              <td data-label="Attendance Ratio (%)">90.8</td>
+              <td data-label="Per Capita Income (₹)">191,736</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/PBKS/Logos/Logooutline/PBKSoutline.png" alt="PBKS" class="logo" />
+                  <span>Punjab Kings</span>
+                </div>
+              </td>
+              <td data-label="City">Mullanpur</td>
+              <td data-label="State">Punjab</td>
+              <td data-label="Life Expectancy">72.1</td>
+              <td data-label="Infant Mortality Rate">20</td>
+              <td data-label="Literacy Rate (%)">75.8</td>
+              <td data-label="Attendance Ratio (%)">88.8</td>
+              <td data-label="Per Capita Income (₹)">154,313</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/RR/Logos/RR_Logo.png" alt="RR" class="logo" />
+                  <span>Rajasthan Royals</span>
+                </div>
+              </td>
+              <td data-label="City">Jaipur</td>
+              <td data-label="State">Rajasthan</td>
+              <td data-label="Life Expectancy">67.9</td>
+              <td data-label="Infant Mortality Rate">37</td>
+              <td data-label="Literacy Rate (%)">66.1</td>
+              <td data-label="Attendance Ratio (%)">89.5</td>
+              <td data-label="Per Capita Income (₹)">110,606</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/RCB/Logos/Logooutline/RCBoutline.png" alt="RCB" class="logo" />
+                  <span>Royal Challengers</span>
+                </div>
+              </td>
+              <td data-label="City">Bengaluru</td>
+              <td data-label="State">Karnataka</td>
+              <td data-label="Life Expectancy">69.0</td>
+              <td data-label="Infant Mortality Rate">23</td>
+              <td data-label="Literacy Rate (%)">75.4</td>
+              <td data-label="Attendance Ratio (%)">95.3</td>
+              <td data-label="Per Capita Income (₹)">212,477</td>
+            </tr>
+            <tr>
+              <td data-label="Team">
+                <div class="team-cell">
+                  <img src="https://documents.iplt20.com/ipl/SRH/Logos/Logooutline/SRHoutline.png" alt="SRH" class="logo" />
+                  <span>Sunrisers Hyderabad</span>
+                </div>
+              </td>
+              <td data-label="City">Hyderabad</td>
+              <td data-label="State">Andhra Pradesh</td>
+              <td data-label="Life Expectancy">69.0</td>
+              <td data-label="Infant Mortality Rate">29</td>
+              <td data-label="Literacy Rate (%)">67.0</td>
+              <td data-label="Attendance Ratio (%)">86.5</td>
+              <td data-label="Per Capita Income (₹)">151,173</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Mobile Card View -->
+    <div id="mobileView">
+      <div class="card-list">
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/CSK/logos/Logooutline/CSKoutline.png" alt="CSK" class="logo" />
+            <span>Chennai Super Kings</span>
+          </div>
+          <p><strong>City:</strong> Chennai</p>
+          <p><strong>State:</strong> Tamil Nadu</p>
+          <p><strong>Life Expectancy:</strong> 71.0</p>
+          <p><strong>Infant Mortality Rate:</strong> 15</p>
+          <p><strong>Literacy Rate (%):</strong> 80.1</p>
+          <p><strong>Attendance Ratio (%):</strong> 89.5</p>
+          <p><strong>Per Capita Income (₹):</strong> 193,964</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/DC/Logos/LogoOutline/DCoutline.png" alt="DC" class="logo" />
+            <span>Delhi Capitals</span>
+          </div>
+          <p><strong>City:</strong> New Delhi</p>
+          <p><strong>State:</strong> Delhi</p>
+          <p><strong>Life Expectancy:</strong> 73.8</p>
+          <p><strong>Infant Mortality Rate:</strong> 13</p>
+          <p><strong>Literacy Rate (%):</strong> 86.2</p>
+          <p><strong>Attendance Ratio (%):</strong> 89.8</p>
+          <p><strong>Per Capita Income (₹):</strong> 358,430</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/GT/Logos/Logooutline/GToutline.png" alt="GT" class="logo" />
+            <span>Gujarat Titans</span>
+          </div>
+          <p><strong>City:</strong> Ahmedabad</p>
+          <p><strong>State:</strong> Gujarat</p>
+          <p><strong>Life Expectancy:</strong> 69.1</p>
+          <p><strong>Infant Mortality Rate:</strong> 28</p>
+          <p><strong>Literacy Rate (%):</strong> 78.0</p>
+          <p><strong>Attendance Ratio (%):</strong> 93.7</p>
+          <p><strong>Per Capita Income (₹):</strong> 195,845</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/KKR/Logos/Logooutline/KKRoutline.png" alt="KKR" class="logo" />
+            <span>Kolkata Knight Riders</span>
+          </div>
+          <p><strong>City:</strong> Kolkata</p>
+          <p><strong>State:</strong> West Bengal</p>
+          <p><strong>Life Expectancy:</strong> 70.5</p>
+          <p><strong>Infant Mortality Rate:</strong> 22</p>
+          <p><strong>Literacy Rate (%):</strong> 76.3</p>
+          <p><strong>Attendance Ratio (%):</strong> 88.4</p>
+          <p><strong>Per Capita Income (₹):</strong> 101,138</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/LSG/Logos/Logooutline/LSGoutline.png" alt="LSG" class="logo" />
+            <span>Lucknow Super Giants</span>
+          </div>
+          <p><strong>City:</strong> Lucknow</p>
+          <p><strong>State:</strong> Uttar Pradesh</p>
+          <p><strong>Life Expectancy:</strong> 64.5</p>
+          <p><strong>Infant Mortality Rate:</strong> 43</p>
+          <p><strong>Literacy Rate (%):</strong> 67.7</p>
+          <p><strong>Attendance Ratio (%):</strong> 79.2</p>
+          <p><strong>Per Capita Income (₹):</strong> 66,512</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/MI/Logos/Logooutline/MIoutline.png" alt="MI" class="logo" />
+            <span>Mumbai Indians</span>
+          </div>
+          <p><strong>City:</strong> Mumbai</p>
+          <p><strong>State:</strong> Maharashtra</p>
+          <p><strong>Life Expectancy:</strong> 72.0</p>
+          <p><strong>Infant Mortality Rate:</strong> 19</p>
+          <p><strong>Literacy Rate (%):</strong> 82.3</p>
+          <p><strong>Attendance Ratio (%):</strong> 90.8</p>
+          <p><strong>Per Capita Income (₹):</strong> 191,736</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/PBKS/Logos/Logooutline/PBKSoutline.png" alt="PBKS" class="logo" />
+            <span>Punjab Kings</span>
+          </div>
+          <p><strong>City:</strong> Mullanpur</p>
+          <p><strong>State:</strong> Punjab</p>
+          <p><strong>Life Expectancy:</strong> 72.1</p>
+          <p><strong>Infant Mortality Rate:</strong> 20</p>
+          <p><strong>Literacy Rate (%):</strong> 75.8</p>
+          <p><strong>Attendance Ratio (%):</strong> 88.8</p>
+          <p><strong>Per Capita Income (₹):</strong> 154,313</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/RR/Logos/RR_Logo.png" alt="RR" class="logo" />
+            <span>Rajasthan Royals</span>
+          </div>
+          <p><strong>City:</strong> Jaipur</p>
+          <p><strong>State:</strong> Rajasthan</p>
+          <p><strong>Life Expectancy:</strong> 67.9</p>
+          <p><strong>Infant Mortality Rate:</strong> 37</p>
+          <p><strong>Literacy Rate (%):</strong> 66.1</p>
+          <p><strong>Attendance Ratio (%):</strong> 89.5</p>
+          <p><strong>Per Capita Income (₹):</strong> 110,606</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/RCB/Logos/Logooutline/RCBoutline.png" alt="RCB" class="logo" />
+            <span>Royal Challengers</span>
+          </div>
+          <p><strong>City:</strong> Bengaluru</p>
+          <p><strong>State:</strong> Karnataka</p>
+          <p><strong>Life Expectancy:</strong> 69.0</p>
+          <p><strong>Infant Mortality Rate:</strong> 23</p>
+          <p><strong>Literacy Rate (%):</strong> 75.4</p>
+          <p><strong>Attendance Ratio (%):</strong> 95.3</p>
+          <p><strong>Per Capita Income (₹):</strong> 212,477</p>
+        </div>
+
+        <div class="card">
+          <div class="team-cell">
+            <img src="https://documents.iplt20.com/ipl/SRH/Logos/Logooutline/SRHoutline.png" alt="SRH" class="logo" />
+            <span>Sunrisers Hyderabad</span>
+          </div>
+          <p><strong>City:</strong> Hyderabad</p>
+          <p><strong>State:</strong> Andhra Pradesh</p>
+          <p><strong>Life Expectancy:</strong> 69.0</p>
+          <p><strong>Infant Mortality Rate:</strong> 29</p>
+          <p><strong>Literacy Rate (%):</strong> 67.0</p>
+          <p><strong>Attendance Ratio (%):</strong> 86.5</p>
+          <p><strong>Per Capita Income (₹):</strong> 151,173</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
